@@ -1,0 +1,155 @@
+# RPG Game Friday
+
+A 2D turn-based RPG game developed in Unity during the post-COVID period. Originally planned as a 4-person group project, this game was ultimately completed as a solo effort due to team members from Ukraine being unable to continue development when the war began.
+
+## Project Overview
+
+**Lead Developer:** Solo development (originally 4-person team)  
+**Engine:** Unity  
+**Genre:** 2D Turn-based RPG  
+**Development Period:** Post-COVID era  
+**Project Context:** University group project with sprint methodology
+
+## Game Features
+
+### Core Gameplay
+- **Turn-based Combat System**: Strategic battles with player and enemy turns
+- **Character Progression**: Experience points, leveling up, and stat growth
+- **Inventory Management**: Item collection, usage, and equipment system
+- **Quest System**: Mission tracking with completion markers
+- **Area Exploration**: Multiple connected game areas with transitions
+
+### Combat System
+- **Magic System**: Spell casting with MP costs
+- **Equipment**: Weapons and armor that affect character stats
+- **Damage Calculation**: Formula-based damage with attack/defense ratios
+- **Battle Effects**: Visual effects for attacks and spells
+- **Multiple Enemies**: Support for various enemy types per battle
+- **Flee Option**: Ability to escape from battles (with restrictions)
+
+### Character System
+- **Multiple Characters**: Support for party-based gameplay
+- **Stat Management**: HP, MP, Strength, Defense, Weapon Power, Armor Power
+- **Equipment Slots**: Separate weapon and armor equipping
+- **Character Images**: Visual representation of party members
+
+### World & Exploration
+- **Area Transitions**: Seamless movement between different game zones
+- **Camera System**: Bounded camera that follows the player
+- **Interactive Objects**: Pickupable items and interactive elements
+- **Collision Detection**: Proper boundary management and trigger systems
+
+### User Interface
+- **Game Menu**: Character stats, inventory, and equipment management
+- **Dialog System**: NPC conversations with name display
+- **Quest Log**: Track active and completed missions
+- **Shop System**: Buy and sell items with merchants
+- **Battle UI**: Turn indicators, health bars, and action menus
+- **Fade Transitions**: Smooth scene transitions with visual effects
+
+### Audio System
+- **Background Music**: Area-specific music that changes with location
+- **Sound Effects**: Combat sounds, UI feedback, and environmental audio
+- **Audio Management**: Centralized audio control with SFX and BGM separation
+
+### Save System
+- **Progress Saving**: Character stats, inventory, and quest progress
+- **Scene Persistence**: Remember player location and game state
+- **Data Loading**: Resume game from saved state
+
+## Technical Architecture
+
+### Core Managers
+- **GameManager**: Central game state management and data persistence
+- **BattleManager**: Complete turn-based combat system
+- **AudioManager**: Sound and music management
+- **DialogManager**: Conversation system with NPC interactions
+- **QuestManager**: Mission tracking and completion system
+
+### Player Systems
+- **PlayerController**: Movement, boundaries, and area transitions
+- **CharStats**: Character progression and stat management
+- **Items**: Equipment and consumable item system
+
+### UI Components
+- **GameMenu**: Inventory and character management interface
+- **Shop**: Merchant interaction system
+- **UIFade**: Screen transition effects
+- **BattleUI**: Combat interface elements
+
+### Area Management
+- **AreaEntrance/Exit**: Scene transition system
+- **CameraController**: Bounded camera with tilemap integration
+- **EssentialsLoader**: Singleton pattern for core game objects
+
+## Key Game Mechanics
+
+### Battle Flow
+1. **Turn Management**: Automatic turn cycling between players and enemies
+2. **Action Selection**: Attack, Magic, Items, or Flee options
+3. **Target Selection**: Choose specific enemies for attacks
+4. **Damage Resolution**: Calculate and apply damage with visual feedback
+5. **Victory/Defeat**: Handle battle outcomes with rewards or game over
+
+### Character Progression
+- **Experience Gain**: Earn XP from battles
+- **Level Up**: Automatic stat increases and HP/MP growth
+- **Equipment**: Find and equip better weapons and armor
+- **Skill Learning**: Characters have different available moves/spells
+
+### Quest System
+- **Quest Markers**: Trigger quest updates through dialog or area interaction
+- **Completion Tracking**: Mark quests as complete or incomplete
+- **Object Activation**: Show/hide objects based on quest status
+
+## Development Challenges
+
+This project faced significant challenges when team members from Ukraine had to discontinue development due to the war. Originally designed as a collaborative effort with sprint-based development, the project was completed solo, requiring:
+
+- Complete system integration across all game components
+- Solo implementation of all planned features
+- Maintaining code quality and architecture standards
+- Meeting project deadlines despite reduced team size
+
+## Technical Highlights
+
+### Robust Save System
+- Comprehensive data persistence for all game elements
+- Scene management with position restoration
+- Inventory and character state preservation
+
+### Modular Architecture
+- Clean separation of concerns between managers
+- Singleton pattern for global systems
+- Event-driven communication between components
+
+### Combat Balance
+- Formula-based damage calculation
+- MP management for special abilities
+- Equipment impact on character effectiveness
+
+### User Experience
+- Smooth area transitions with loading screens
+- Intuitive UI design for all game functions
+- Audio feedback for all player actions
+
+## Code Organization
+
+The project follows a clean modular structure:
+- **AreaAndCamera/**: Scene management and camera systems
+- **Battle/**: Complete combat system implementation
+- **Dialog/**: NPC conversation system
+- **Items/**: Inventory and equipment management
+- **Player/**: Character control and progression
+- **UIElements/**: Interface components and menus
+- **QuestObjects/**: Mission system components
+
+## Legacy and Learning
+
+This project demonstrates resilience and adaptability in game development, showing how a complex RPG system can be successfully completed even when facing significant team disruptions. The codebase reflects solid Unity development practices and a comprehensive understanding of RPG game mechanics.
+
+The experience provided valuable lessons in:
+- Solo project management and completion
+- Maintaining code quality under pressure
+- Implementing complex interconnected game systems
+- Managing scope and feature completion independently
