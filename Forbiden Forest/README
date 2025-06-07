@@ -1,0 +1,212 @@
+# Forbidden Forest
+
+A first-person fantasy horror/puzzle solving game where players control Arthur, an imprisoned warrior-mage seeking freedom and revenge against The Crown. Set in Medieval England, players must escape from a dangerous forest filled with monsters, puzzles, and hostile guards.
+
+## 📋 Table of Contents
+- [Game Overview](#game-overview)
+- [Story](#story)
+- [Core Features](#core-features)
+- [Gameplay Systems](#gameplay-systems)
+- [Controls](#controls)
+- [Technical Implementation](#technical-implementation)
+- [Installation & Setup](#installation--setup)
+- [Development](#development)
+- [Credits](#credits)
+
+## 🎮 Game Overview
+
+**Genre:** Horror / Puzzle Solving  
+**Platform:** PC  
+**Target Audience:** 15+ (due to violence, blood, and horror themes)  
+**Setting:** Medieval England, 5th-6th centuries in the fictional city of Moustree  
+**Engine:** Unity with C# scripting  
+
+### Inspiration
+Drawing inspiration from acclaimed titles:
+- **Dead by Daylight (2016)** - Survival horror mechanics
+- **Diablo III (2012)** - Fantasy combat and magic systems  
+- **Dark Souls (2009)** - Challenging gameplay and atmospheric design
+
+## 📖 Story
+
+Arthur, a powerful warrior-mage, has been imprisoned by The Crown due to his growing magical powers being perceived as a threat to the kingdom. Betrayed and captured through an elaborate trap involving a beautiful woman, Arthur awakens in an ancient cave deep within the Forbidden Forest.
+
+When a falling meteor weakens the magical spell containing his powers, Arthur seizes his chance to escape. However, the forest is filled with dangerous creatures, hostile guards, and his weapons have been hidden throughout the land.
+
+## ⚔️ Core Features
+
+### Character Abilities
+- **Dual Weapon System:** Magical wand for spellcasting and sword for melee combat
+- **Magic Spells:** Fireball and Frostbolt with unique properties and cooldowns
+- **Movement:** Walking, running (limited stamina), jumping, and item interaction
+- **Combat:** Both melee attacks and ranged magic with timing-based mechanics
+
+### Spell System
+- **Fireball (Key: 1):** Fire-based projectile that burns enemies over time for 3 seconds
+- **Frostbolt (Key: 2):** Ice-based attack that slows enemies by 20% on hit
+- **Casting Requirements:** Player must stand still while casting spells
+- **Targeting:** Mouse-controlled aiming system for spell trajectory
+
+### Quest System
+1. **Get Out:** Solve ancient alphabet puzzle to escape the initial cave prison
+2. **Find Hidden Weapons:** Recover Arthur's stolen sword and magical wand
+   - **Sword:** Hidden with the guard leader at their camp
+   - **Wand:** Concealed in the ancient King's ruins
+   - **Medallion:** Required key item found on ancient warrior's corpse
+
+## 🎯 Gameplay Systems
+
+### Enemies and Challenges
+
+**Wild Creatures:**
+- **Spiders:** Easy difficulty, poison attacks, found deep in forest
+- **Wolves:** Medium difficulty, travel in packs, very fast
+- **Cave Troll:** Hard difficulty, triggered by wrong puzzle answers, slow but high damage
+- **Ghosts:** Very hard difficulty, appear near ancient warrior corpses, quick with high damage
+
+**Human Adversaries:**
+- **Guards:** Patrol the forest with sophisticated AI patrol patterns
+- **Captain:** Possesses Arthur's sword, heavily armored
+
+### Environmental Systems
+
+**Lighting:**
+- **Moon Light:** Natural illumination during night sequences
+- **Fire Light:** Campfires provide warmth and monster protection for guards
+- **Flare Light:** Player-usable light sources for navigation
+
+**Level Design:**
+- **Arthur's Prison:** Starting location with runic power-suppression pillars
+- **Ancient Warrior's Tomb:** Contains essential quest items and powerful enemies
+- **King's Ruins:** Hidden location containing Arthur's magical wand
+- **Forest Paths:** Interconnected areas with multiple enemy spawn points
+
+### Character Progression
+- **Health & Magic Points:** Traditional RPG-style resource management
+- **Experience System:** Level progression through quest completion and combat
+- **Inventory Management:** 40-slot grid system accessible via 'I' key
+- **Stats:** Strength, Defense, Weapon Power, Armor Power with level-based improvements
+
+## 🎮 Controls
+
+### Movement
+- **W/A/S/D:** Move forward/left/backward/right
+- **Shift:** Run (limited stamina)
+- **Space:** Jump
+
+### Combat & Magic
+- **Left Click:** Basic attack/use items
+- **Right Click:** Pick up items
+- **1:** Cast Fireball
+- **2:** Cast Frostbolt
+
+### Interface
+- **I:** Open inventory
+- **Mouse:** Camera rotation and spell targeting
+- **L:** Debug speed boost (development feature)
+
+## 🛠️ Technical Implementation
+
+### Game Mechanics
+- **First-Person Perspective:** Immersive viewpoint with visible player hand
+- **Physics System:** Gravity, collision detection, and realistic object interactions
+- **NavMesh Navigation:** Advanced pathfinding for both player and AI entities
+- **Guard Patrol AI:** Time-based patrol rotation system with state machine
+
+### AI Systems
+- **Dynamic Dialogue:** Context-sensitive conversations between NPCs
+- **Collision Avoidance:** Smart enemy movement and interaction systems
+- **Enemy States:** Patrol, Follow, Attack behaviors with distance-based triggers
+
+### User Interface
+- **Quest Log:** Dual-panel system showing active quests and completion log
+- **HUD Elements:** Health bar (red), Magic bar (blue), Experience bar (green)
+- **Menu System:** Main menu, pause menu, options (video/audio/controls)
+- **Save/Load System:** Persistent game state and quest progress
+
+### Audio System
+- **AudioManager:** Centralized sound effect and background music management
+- **Environmental Audio:** Comprehensive sound system with atmospheric audio
+- **SFX Integration:** Combat sounds, spell effects, and UI feedback
+
+## 💾 Installation & Setup
+
+### Prerequisites
+- Unity 2019.4 LTS or later
+- Windows PC (target platform)
+- At least 4GB RAM
+- DirectX 11 compatible graphics card
+
+### Project Setup
+1. Clone or download the project repository
+2. Open Unity Hub and add the project
+3. Open the project in Unity
+4. Ensure all required packages are installed
+5. Build and run the project
+
+### Build Instructions
+1. Go to File → Build Settings
+2. Add all scenes to the build
+3. Select Windows as target platform
+4. Configure player settings as needed
+5. Click Build to create executable
+
+## 🔧 Development
+
+### Architecture Overview
+The game follows a modular architecture with the following key systems:
+
+- **GameManager:** Handles save/load, inventory, and global game state
+- **Stats:** Player character statistics and progression
+- **QManager:** Quest system management and tracking
+- **AudioManager:** Centralized audio control
+- **CharacterMovement:** Player movement and basic interactions
+- **AI State Machines:** Enemy behavior control
+
+### Key Scripts
+- `CharacterMovement.cs` - Player controller with movement, jumping, and basic combat
+- `Stats.cs` - Character stats, health/mana management, and leveling system
+- `GameManager.cs` - Inventory system, save/load functionality
+- `QManager.cs` - Quest tracking and completion system
+- `StateMachine.cs` - AI behavior for patrol guards
+- `Fireball.cs` - Spell casting system for magical combat
+
+### Asset Credits
+The game utilizes various assets sourced from Unity Asset Store under appropriate licensing:
+- Environmental assets for forest and medieval architecture
+- Character models and animations
+- Audio effects and ambient sounds
+- Particle effects for spells and environmental elements
+
+## 📄 Intellectual Property
+
+This project was developed following intellectual property best practices:
+- Original storyline and character development
+- Properly licensed Unity Asset Store content
+- Custom dialogue and quest design
+- Original puzzle mechanics and level design
+
+## 🎯 Future Development
+
+Potential areas for expansion:
+- Additional spell types and magical abilities
+- More complex puzzle mechanics
+- Expanded quest system with branching narratives
+- Multiplayer cooperative gameplay
+- Enhanced AI behaviors and enemy types
+
+## 🤝 Contributing
+
+This is an educational/portfolio project. For suggestions or improvements:
+1. Create detailed issue reports
+2. Follow established coding conventions
+3. Test thoroughly before submitting changes
+4. Document any new features or systems
+
+## 📞 Support
+
+For technical issues or questions about the project, please refer to the in-game documentation or contact the development team.
+
+---
+
+**Forbidden Forest** represents a comprehensive approach to horror-puzzle game design, combining atmospheric storytelling with challenging gameplay mechanics in a richly detailed medieval fantasy setting.
